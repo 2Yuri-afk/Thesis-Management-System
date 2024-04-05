@@ -1,15 +1,41 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./LogIn.css";
 import tms from "../../assets/SignUp-LogIn/tms.png";
-import fullname from "../../assets/SignUp-LogIn/fullname-icon.png";
-import email from "../../assets/SignUp-LogIn/email-icon.png";
-import password from "../../assets/SignUp-LogIn/password-icon.png";
+import fullname1 from "../../assets/SignUp-LogIn/fullname-icon.png";
+import email1 from "../../assets/SignUp-LogIn/email-icon.png";
+import password1 from "../../assets/SignUp-LogIn/password-icon.png";
 import google from "../../assets/SignUp-LogIn/google.png";
+import { useState } from 'react';
+import { Link } from "react-router-dom";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+      event.preventDefault();
+      
+      axios.post( 'http://localhost:3001/login', {email, password})
+      .then(result => {
+          console.log(result);
+          if(result.data === "Success"){
+              console.log("Login Success");
+              alert('Login successful!')
+              navigate('/home');
+          }
+          else{
+              alert('Incorrect password! Please try again.');
+          }
+      })
+      .catch(err => console.log(err));
+  }
+
   return (
-    <body>
+    <>
       <div className="background">
         <div className="card">
           <div className="card-left">
@@ -19,18 +45,20 @@ const LogIn = () => {
             </div>
           </div>
           <div className="card-right">
-            <form>
+            <form onSubmit={handleSubmit}>  
               <h1>LOG IN</h1>
               <p>
                 Don't have an account yet? <Link to="/SignUp">Sign Up</Link>
               </p>
               <div className="input-box">
-                <img src={email} alt="Email Icon" />
-                <input type="email" placeholder="Email" required />
+                <img src={email1} alt="Email Icon" />
+                <input type="email" placeholder="Email" required 
+                onChange={(event) => setEmail(event.target.value)} />
               </div>
               <div className="input-box">
-                <img src={password} alt="Password  Icon" />
-                <input type="password" placeholder="Password" required />
+                <img src={password1} alt="Password  Icon" />
+                <input type="password" placeholder="Password" required 
+                onChange={(event) => setPassword(event.target.value)}/>
               </div>
               <button className="button">Log In</button>
             </form>
@@ -46,7 +74,7 @@ const LogIn = () => {
           </div>
         </div>
       </div>
-    </body>
+    </>
   );
 };
 
