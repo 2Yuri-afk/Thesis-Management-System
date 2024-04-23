@@ -63,31 +63,7 @@ const SignUp = () => {
             <form className="main" onSubmit={handleSubmit}>
               <h1>Create an Account</h1>
               <p>Let’s get Started Sign up to manage schedules.</p>
-              <Box sx={{ width: "50%" }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Role</InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="Role"
-                    value={role}
-                    onChange={handleChange}
-                    sx={{
-                      minWidth: 150,
 
-                      p: 2,
-                      borderRadius: 2,
-                      backgroundColor: "#eeeaea",
-                      borderColor: "white",
-                      height: 50,
-                    }}
-                  >
-                    <MenuItem value={"Student"}>Student</MenuItem>
-                    <MenuItem value={"Teacher"}>Teacher</MenuItem>
-                    <MenuItem value={"Admin"}>Admin</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
               <div className="input-box">
                 <img src={fullname} alt="Full Name Icon" />
                 <input
