@@ -17,19 +17,18 @@ const LogIn = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
-      event.preventDefault();
+    event.preventDefault();
       
-      axios.post( 'http://localhost:3001/login', {email, password})
+    axios.post('http://localhost:3001/login', { email, password })
       .then(result => {
-          console.log(result);
-          if(result.data === "Success"){
-              console.log("Login Success");
-              alert('Login successful!')
-              navigate('/home');
-          }
-          else{
-              alert('Incorrect password! Please try again.');
-          }
+        console.log(result);
+        if (result.data.message === "Success") {
+          console.log("Login Success");
+          alert('Login successful!');
+          navigate('/home');
+        } else {
+          alert('Incorrect password! Please try again.');
+        }
       })
       .catch(err => console.log(err));
   }
