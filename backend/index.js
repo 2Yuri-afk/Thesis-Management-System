@@ -1,9 +1,7 @@
 import cors from "cors";
 import express, { json } from "express";
 import { connect } from "mongoose";
-import StudentModel from "./models/student.js";
-import TeacherModel from "./models/teacher.js";
-import AdminModel from "./models/admin.js";
+import UserModel from "./models/user.js";
 
 const app = express();
 app.use(json());
@@ -16,61 +14,36 @@ connect("mongodb+srv://INNOGATE:INNOGATE@cluster0.ofiaajx.mongodb.net/User", {
 });
 
 app.post("/register", (req, res) => {
-  const { email, password, role } = req.body;
+  const { email, password } = req.body;
 
-  if (role === "Student") {
-    // Student registration logic
-    StudentModel.findOne({ email: email }).then((user) => {
-      if (user) {
-        res.json("Already registered");
-      } else {
-        StudentModel.create(req.body)
-          .then((log_reg_form) => res.json(log_reg_form))
-          .catch((err) => res.json(err));
-      }
-    });
-  } else if (role === "Teacher") {
-    // Professor registration logic
-    TeacherModel.findOne({ email: email }).then((user) => {
-      if (user) {
-        res.json("Already registered");
-      } else {
-        TeacherModel.create(req.body)
-          .then((log_reg_form) => res.json(log_reg_form))
-          .catch((err) => res.json(err));
-      }
-    });
-  } else if (role === "Admin") {
-    // Admin registration logic
-    AdminModel.findOne({ email: email }).then((user) => {
-      if (user) {
-        res.json("Already registered");
-      } else {
-        AdminModel.create(req.body)
-          .then((log_reg_form) => res.json(log_reg_form))
-          .catch((err) => res.json(err));
-      }
-    });
-  } else {
-    res.json("Invalid role");
-  }
+  // Check if user with provided email already exists
+  UserModel.findOne({ email: email }).then((user) => {
+    if (user) {
+      res.json("Already registered");
+    } else {
+      // Create new user
+      UserModel.create(req.body)
+        .then((newUser) => res.json(newUser))
+        .catch((err) => res.json(err));
+    }
+  });
 });
 
+
 app.post("/login", (req, res) => {
-  // To find record from the database
   const { email, password } = req.body;
-  StudentModel.findOne({ email: email }).then((user) => {
+  
+  // Find user by email
+  UserModel.findOne({ email: email }).then((user) => {
     if (user) {
-      // If user found then these 2 cases
+      // Compare passwords
       if (user.password === password) {
-        res.json("Success");
+        res.json({ message: "Success", user: user });
       } else {
-        res.json("Wrong password");
+        res.json({ message: "Wrong password" });
       }
-    }
-    // If user not found then
-    else {
-      res.json("No records found! ");
+    } else {
+      res.json({ message: "No user found with that email" });
     }
   });
 });

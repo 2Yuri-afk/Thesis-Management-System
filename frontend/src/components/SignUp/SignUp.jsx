@@ -17,13 +17,8 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = React.useState("");
 
   const navigate = useNavigate();
-
-  const handleChange = (event) => {
-    setRole(event.target.value);
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,7 +28,6 @@ const SignUp = () => {
         name,
         email,
         password,
-        role,
       })
       .then((result) => {
         console.log(result);
