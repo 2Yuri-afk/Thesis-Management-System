@@ -1,11 +1,13 @@
 import React from "react";
-import "./teacher-styles.css";
+import "./adviser-styles.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu.jsx";
 import Header from "./Header.jsx";
 import Schedule from "./pages/schedule.jsx";
-import Proposal from "./pages/proposal.jsx";
-import MyStudents from "./pages/mystudents.jsx";
+import ManageGroup from "./pages/managegroup.jsx";
+import GroupRequest from "./pages/grouprequest.jsx";
+import Profile from "./pages/profile.jsx";
+
 import testPic from "../../assets/StudentDashboard/testpic.jpg";
 
 const userPictureUrl = testPic;
@@ -16,16 +18,20 @@ const menuData = [
     path: "/schedule",
   },
   {
-    title: "Proposal",
-    path: "/proposal",
+    title: "Group Request",
+    path: "/group-request",
   },
   {
-    title: "My Students",
-    path: "/mystudents",
+    title: "Manage Group",
+    path: "/manage-group",
+  },
+  {
+    title: "Profile",
+    path: "/profile",
   },
 ];
 
-const TeacherDashboard = () => {
+const AdviserDashboard = () => {
   return (
     <div className="container">
       <SidebarMenu menuData={menuData} />
@@ -33,12 +39,13 @@ const TeacherDashboard = () => {
         <Header userPictureUrl={userPictureUrl} />
         <Routes>
           <Route path="/schedule" element={<Schedule />} />
-          <Route path="/proposal" element={<Proposal />} />
-          <Route path="/mystudents" element={<MyStudents />} />
+          <Route path="/group-request" element={<GroupRequest />} />
+          <Route path="/manage-group" element={<ManageGroup />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </div>
   );
 };
 
-export default TeacherDashboard;
+export default AdviserDashboard;

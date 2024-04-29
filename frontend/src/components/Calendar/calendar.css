@@ -1,0 +1,106 @@
+.cont {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7%;
+}
+
+.cal {
+  width: 1300px;
+  border: 1px pink;
+  padding: 10px;
+  height: 700px;
+}
+
+.cal-bg {
+  width: 1400px;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.rbc-header {
+  background-color: #bd5b5b;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.rbc-calendar {
+  font-family: Open sans, sans serif;
+  border-radius: 10px;
+}
+.rbc-button-link {
+  font-size: 14px;
+  color: #4a5660;
+  font-weight: 600;
+}
+
+.rbc-off-range .rbc-button-link {
+  font-size: 14px;
+  color: #aab2b4;
+  font-weight: 600;
+}
+
+.rbc-day-bg.rbc-off-range-bg {
+  background-color: #dee0e1;
+}
+
+.rbc-event {
+  background-color: #a67d7d;
+  color: rgb(64, 61, 61);
+  font-weight: 800;
+  margin: auto;
+  width: 80%;
+}
+
+.rbc-day-bg {
+  background-color: #ffffff;
+}
+
+.rbc-row-bg {
+  border: 3px;
+}
+
+.rbc-time-slot {
+  border-right: 1px solid #ddd;
+}
+
+.rbc-time-header-content .rbc-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rbc-time-header-content .rbc-header .rbc-button-link {
+  font-size: 20px;
+  padding: 10px;
+  color: #fff;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  width: 75px;
+  height: 75px;
+  background-color: #8d4242;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.add-button:hover {
+  background-color: #673333;
+}

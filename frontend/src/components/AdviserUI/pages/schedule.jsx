@@ -1,6 +1,5 @@
 import React from "react";
-import "./admin-pages.css";
-// import EventScheduler from "../../Calendar/EventScheduler";
+import "./adviser-pages.css";
 import MyCalendar from "../../Calendar/MyCalendar";
 
 export default function schedule() {

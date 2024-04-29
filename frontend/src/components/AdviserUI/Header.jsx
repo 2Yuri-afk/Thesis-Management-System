@@ -1,5 +1,5 @@
 import React from "react";
-import "./admin-styles.css";
+import "./adviser-styles.css";
 import notif from "../../assets/StudentDashboard/Notif.png";
 
 const Header = ({ userPictureUrl }) => {

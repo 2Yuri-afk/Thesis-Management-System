@@ -1,7 +1,7 @@
 import React from "react";
 import "./teacher-pages.css";
 
-export default function proposals() {
+export default function proposal() {
   return (
     <>
       <div className="apple">
