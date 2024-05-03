@@ -16,8 +16,8 @@ function App() {
 
     // <StudentDashboard />
     // <AdminDashboard />
-    // <TeacherDashboard />
-    <AdviserDashboard />
+     <TeacherDashboard />
+    //<AdviserDashboard />
   );
 }
 
