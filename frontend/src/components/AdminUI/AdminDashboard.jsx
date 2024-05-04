@@ -6,6 +6,7 @@ import Header from "./Header.jsx";
 import Schedule from "./pages/schedule.jsx";
 import Group from "./pages/group.jsx";
 import Panelists from "./pages/panelists.jsx";
+import Roles from "./pages/role-select.jsx"
 import testPic from "../../assets/StudentDashboard/testpic.jpg";
 
 const userPictureUrl = testPic;
@@ -23,6 +24,10 @@ const menuData = [
     title: "Panelists",
     path: "/panelists",
   },
+  {
+    title: "Accounts",
+    path: "/roles",
+  },
 ];
 
 const AdminDashboard = () => {
@@ -35,6 +40,7 @@ const AdminDashboard = () => {
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/group" element={<Group />} />
           <Route path="/panelists" element={<Panelists />} />
+          <Route path="/roles" element={<Roles />} />
         </Routes>
       </div>
     </div>
