@@ -7,7 +7,6 @@
 .form {
   border: 1px solid #ccc;
   padding: 40px;
-  margin-top: 20px;
   border-radius: 10px;
   background-color: white;
   width: 50%;
@@ -15,7 +14,6 @@
   max-height: 500px; /* Set maximum height */
   overflow-y: auto; /* Enable vertical scrolling */
 }
-
 
 .popup {
   position: absolute;
@@ -41,8 +39,6 @@
   background-color: #ccc; /* Add background color on hover */
 }
 
-
-
 .cancel-btn {
   position: absolute;
   top: -10px;
@@ -60,6 +56,7 @@
 .accounts {
 text-align: center;
 position: relative;
+top: 20px;
 }
 
 .email {
@@ -87,8 +84,8 @@ position: relative;
 
 .role_button {
   position: absolute;
-  top: 150px; /* Adjust top position */
-  right: 350px; /* Adjust right position */
+  top: 130px; /* Adjust top position */
+  right: 230px; /* Adjust right position */
   background-color: #8d4242;
   color: white;
   padding: 5px 10px;
