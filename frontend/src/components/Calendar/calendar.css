@@ -1,29 +1,3 @@
-.cont {
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 7%;
-}
-
-.cal {
-  width: 1300px;
-  border: 1px pink;
-  padding: 10px;
-  height: 700px;
-}
-
-.cal-bg {
-  width: 1400px;
-  height: 750px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  margin-top: 50px;
-  border-radius: 20px;
-}
-
 .rbc-header {
   background-color: #bd5b5b;
   padding: 10px;

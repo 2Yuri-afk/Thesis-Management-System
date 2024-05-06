@@ -1,13 +1,13 @@
 import React from "react";
-import "./student-styles.css";
+import styles from "./StudentDashboard.module.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import SidebarMenu from "./SidebarMenu";
-import Header from "./Header";
-import Schedule from "./pages/schedule.jsx";
-import Proposal from "./pages/proposal.jsx";
-import Manuscript from "./pages/manuscript.jsx";
-import Group from "./pages/group.jsx";
-import Profile from "./pages/profile.jsx";
+import SidebarMenu from "../Sidebar/SidebarMenu.jsx";
+import Header from "../Header/Header.jsx";
+import Schedule from "./tabs/schedule.jsx";
+import Proposal from "./tabs/proposal.jsx";
+import Manuscript from "./tabs/manuscript.jsx";
+import Group from "./tabs/group.jsx";
+import Profile from "./tabs/profile.jsx";
 import testPic from "../../assets/StudentDashboard/testpic.jpg";
 
 const userPictureUrl = testPic;
@@ -37,9 +37,9 @@ const menuData = [
 
 const StudentDashboard = () => {
   return (
-    <div className="container">
-      <SidebarMenu menuData={menuData} />
-      <div className="main-content">
+    <div className={styles.container}>
+      <SidebarMenu menuData={menuData} role="Student" />
+      <div className={styles.mainContent}>
         <Header userPictureUrl={userPictureUrl} />
         <Routes>
           <Route path="/schedule" element={<Schedule />} />

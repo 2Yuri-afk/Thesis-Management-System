@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.group-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.boxes-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+  margin-bottom: 75px;
+}
+
+.boxes-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+}
+
+.members-box {
+  width: 250px;
+  height: 290px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.thesis-box {
+  width: 950px;
+  height: 290px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.adviser-box {
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.client-box {
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.field-box {
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+
+.members-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.thesis-title-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.the-title {
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.description-text {
+  margin-right: 40px;
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.group-name-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.group-name-input {
+  border-radius: 10px;
+  background-color: rgb(227, 224, 224);
+}
+
+.adviser-pick {
+  background-color: #a46f6f;
+  border-radius: 15px;
+  border-color: transparent;
+  padding: 10px 15px 10px 15px;
+  cursor: pointer;
+  color: white;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.adviser-pick:hover {
+  background-color: #654949;
+}
+
+.client-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.client {
+  font-size: 16px;
+  /* text-align: center; */
+  margin-left: 15px;
+}
+
+.field-text {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.field {
+  font-size: 16px;
+  /* text-align: center; */
+  margin-left: 15px;
+}

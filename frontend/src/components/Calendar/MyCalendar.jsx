@@ -7,13 +7,19 @@ import EventModal from "./EventModal";
 
 const localizer = momentLocalizer(moment);
 
-export default function MyCalendar() {
+export default function MyCalendar({ size }) {
   const [events, setEvents] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
 
   const handleSelectSlot = ({ start, end }) => {
+    setShowModal(true);
+    setSelectedDate(start);
+    setSelectedEvent(null);
+  };
+
+  const handleSelectFAB = ({ start, end }) => {
     setShowModal(true);
     setSelectedDate(start);
     setSelectedEvent(null);
@@ -42,20 +48,25 @@ export default function MyCalendar() {
     setShowModal(false);
   };
 
+  const calendarStyle = {
+    width: size == "admin" ? "1300px" : "1200px",
+    height: size == "admin" ? "700px" : "600px",
+    border: "1px pink",
+    padding: "10px",
+  };
+
   return (
-    <div className="cont">
-      <div className="cal-bg">
-        <Calendar
-          localizer={localizer}
-          events={events}
-          startAccessor="start"
-          endAccessor="end"
-          selectable={true}
-          onSelectSlot={handleSelectSlot}
-          onSelectEvent={handleSelectEvent}
-          className="cal"
-        />
-      </div>
+    <>
+      <Calendar
+        localizer={localizer}
+        events={events}
+        startAccessor="start"
+        endAccessor="end"
+        selectable={true}
+        onSelectSlot={handleSelectSlot}
+        onSelectEvent={handleSelectEvent}
+        style={calendarStyle}
+      />
       <EventModal
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
@@ -63,7 +74,12 @@ export default function MyCalendar() {
         selectedDate={selectedDate}
         saveEvent={saveEvent}
         deleteEvent={deleteEvent}
+        existingGroups={events.map((event) => event.group)}
+        existingRooms={events.map((event) => event.room)}
       />
-    </div>
+      <button className="add-button" onClick={handleSelectFAB}>
+        +
+      </button>
+    </>
   );
 }

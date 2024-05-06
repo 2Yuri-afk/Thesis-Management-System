@@ -1,0 +1,76 @@
+.pageTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.apple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: Open sans, sans-serif;
+  /* width: 100%; */
+  /* background-color: pink; */
+}
+/* 
+    .haha {
+      font-family: Open sans, sans-serif;
+      font-family: 14px;
+    } */
+
+.Lists {
+  display: flex;
+  gap: 70px;
+}
+
+.studentContainer {
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  overflow-y: scroll;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.groupContainer {
+  width: 800px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 10px;
+  overflow-y: scroll;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#btn1 {
+  border-radius: 10px;
+  padding: 8px;
+  width: 90px;
+  background-color: rgb(190, 74, 74);
+  color: white;
+  cursor: pointer;
+  margin-left: 325px;
+  margin-bottom: 10px;
+}
+#btn2 {
+  border-radius: 10px;
+  padding: 8px;
+  width: 90px;
+  background-color: rgb(190, 74, 74);
+  color: white;
+  cursor: pointer;
+  margin-left: 725px;
+  margin-bottom: 10px;
+}
+
+#btn1:hover,
+#btn2:hover {
+  background-color: rgb(112, 51, 51);
+}

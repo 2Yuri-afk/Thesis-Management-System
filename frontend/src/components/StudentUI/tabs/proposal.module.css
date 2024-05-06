@@ -1,0 +1,219 @@
+/* proposal.module.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+.text {
+  margin-top: 100px;
+  font-size: 50px;
+  color: rgb(174, 170, 170);
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formWrapper {
+  margin-bottom: 20px;
+}
+
+.proposalTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Additional CSS for same-length class */
+.sameLength {
+  width: calc(100% - 16px);
+}
+
+.container {
+  position: relative;
+}
+
+.addButton {
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  width: 75px;
+  height: 75px;
+  background-color: #8d4242;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.addButton:hover {
+  background-color: #673333;
+}
+
+.submissionIndicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+@keyframes formEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); /* Start smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Pop up to full size */
+  }
+}
+
+.animatedForm {
+  animation: formEntrance 0.5s ease forwards;
+  opacity: 0;
+}
+
+.formContainer {
+  display: flex;
+  width: 900px;
+  height: 600px;
+  background-color: white;
+  border-radius: 20px;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+.formContainer button {
+  padding: 12px 24px;
+  background-color: #8d4242;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  right: 130px;
+  top: 100px;
+}
+
+.formContainer button:hover {
+  background-color: #673333;
+}
+
+.formContainer label {
+  font-weight: 600;
+}
+
+.cont1 {
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70%;
+  padding-top: 70px;
+}
+
+.cont1 .field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.cont1 .field label {
+  display: inline-block; /* Ensures the width applies */
+  width: 120px; /* Adjust the width to your preference */
+  text-align: right; /* Aligns the text to the right */
+  margin-right: 30px;
+}
+
+.cont1 .field input,
+.cont1 .field textarea {
+  box-sizing: border-box;
+  background-color: #d9d9d9;
+}
+
+.titleInput {
+  max-width: 650px;
+  border-radius: 15px;
+  height: 60px;
+}
+.detailsInput {
+  width: 650px;
+  height: 150px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  resize: none;
+  margin-left: 5px;
+  font-size: 17px;
+}
+
+.cont2 {
+  /* background-color: skyblue; */
+  height: 50%;
+  display: flex;
+  gap: 40px;
+  margin-left: 85px;
+}
+
+.cont2 .field {
+  display: flex;
+}
+
+.cont2 .field label {
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.clientInput {
+  min-width: 255px;
+  height: 30px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+}
+
+.fieldInput {
+  width: 275px;
+  height: 50px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}

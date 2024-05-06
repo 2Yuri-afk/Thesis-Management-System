@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed to center vertically on the page */
+  }
+  
+  .container img {
+    max-width: 40%; /* Adjust the max-width to resize the image */
+    max-height: 40%; /* Adjust the max-height to resize the image */
+  }
+  

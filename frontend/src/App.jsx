@@ -1,4 +1,5 @@
 import SignUp from "./components/SignUp/SignUp.jsx";
+import DoneScrn from "./components/SignUp/Done.jsx";
 import LogIn from "./components/LogIn/LogIn.jsx";
 import StudentDashboard from "./components/StudentUI/StudentDashboard.jsx";
 import AdminDashboard from "./components/AdminUI/AdminDashboard.jsx";
@@ -12,12 +13,13 @@ function App() {
     // <Routes>
     //   <Route path="/" element={<LogIn />} />
     //   <Route path="/SignUp" element={<SignUp />} />
+    //   <Route path="/DoneScrn" element={<DoneScrn />} />
     // </Routes>
 
     // <StudentDashboard />
-    // <AdminDashboard />
+    <AdminDashboard />
     // <TeacherDashboard />
-    <AdviserDashboard />
+    // <AdviserDashboard />
   );
 }
 

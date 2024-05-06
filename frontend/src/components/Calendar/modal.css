@@ -14,10 +14,10 @@
 .modal-content {
   background-color: #f9f9f9;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   min-width: 600px;
-  height: 400px;
+  height: 450px;
   font-family: Open sans, sans serif;
 }
 
@@ -33,14 +33,14 @@
   width: 60%;
   padding: 10px;
   border: 2px solid #ddd;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   background-color: #f5f6f7;
 }
 
 .modal-label {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-right: 20px;
   margin-left: 25px;
 
@@ -52,14 +52,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 25px;
 }
 .modal-button {
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  margin-right: 10px;
+  width: 125px;
+  /* margin-right: 25px; */
 }
 
 .modal-save-button {

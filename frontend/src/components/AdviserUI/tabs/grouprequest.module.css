@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.content {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group-requests-title {
+  margin: 10px 0;
+  font-size: 23px;
+  font-weight: bold;
+  color: #5c5353;
+}
+
+.title-container {
+  width: 185px;
+  height: 100px;
+  margin-top: 40px;
+
+  strong {
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 43px;
+  }
+}
+
+.members {
+  width: 402px;
+}
+
+.thesis-title {
+  margin-top: 37px;
+
+  strong {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+.container1 {
+  margin-left: 10px auto;
+  border-radius: 20px;
+  padding: 20px;
+  width: 724px;
+  height: 347px;
+  background-color: white;
+  filter: drop-shadow(0 0.2rem 0.4rem rgba(104, 104, 104, 0.8));
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.person-list {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.person-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.person-name {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.accept-button,
+.reject-button {
+  width: 109px;
+  height: 38px;
+  border-radius: 5px;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.accept-button {
+  background-color: #8d4242;
+  border: none;
+  color: white;
+}
+
+.reject-button {
+  background-color: white;
+  border: 1px solid #8d4242;
+  color: #8d4242;
+  margin-left: 10px;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

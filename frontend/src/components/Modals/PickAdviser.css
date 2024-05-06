@@ -1,0 +1,63 @@
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  margin-right: 25px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.272);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pick-adviser-modal {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  margin-left: 200px;
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.pick-text {
+  margin-left: 40%;
+}
+
+.another-text {
+  margin-left: 35px;
+}
+.advisers {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 55px;
+}
+
+.adviser {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}

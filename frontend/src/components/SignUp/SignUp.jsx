@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SignUp.css";
+import styles from "./SignUp.module.css";
 import tms from "../../assets/SignUp-LogIn/tms.png";
 import fullname from "../../assets/SignUp-LogIn/fullname-icon.png";
 import email1 from "../../assets/SignUp-LogIn/email-icon.png";
@@ -7,11 +7,6 @@ import password1 from "../../assets/SignUp-LogIn/password-icon.png";
 import google from "../../assets/SignUp-LogIn/google.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -45,20 +40,20 @@ const SignUp = () => {
 
   return (
     <>
-      <div className="background">
-        <div className="card">
-          <div className="card-left">
+      <div className={styles.background}>
+        <div className={styles.card}>
+          <div className={styles.cardLeft}>
             <img src={tms} alt="TMS" />
-            <div className="title">
+            <div className={styles.title}>
               Thesis<br></br>Management<br></br>System
             </div>
           </div>
-          <div className="card-right">
-            <form className="main" onSubmit={handleSubmit}>
+          <div className={styles.cardRight}>
+            <form className={styles.main} onSubmit={handleSubmit}>
               <h1>Create an Account</h1>
               <p>Let’s get Started Sign up to manage schedules.</p>
 
-              <div className="input-box">
+              <div className={styles.inputBox}>
                 <img src={fullname} alt="Full Name Icon" />
                 <input
                   type="text"
@@ -67,7 +62,7 @@ const SignUp = () => {
                   onChange={(event) => setName(event.target.value)}
                 />
               </div>
-              <div className="input-box">
+              <div className={styles.inputBox}>
                 <img src={email1} alt="Email Icon" />
                 <input
                   type="email"
@@ -76,7 +71,7 @@ const SignUp = () => {
                   onChange={(event) => setEmail(event.target.value)}
                 />
               </div>
-              <div className="input-box">
+              <div className={styles.inputBox}>
                 <img src={password1} alt="Password Icon" />
                 <input
                   type="password"
@@ -85,13 +80,13 @@ const SignUp = () => {
                   onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
-              <button className="button">Sign Up</button>
+              <button className={styles.button}>Sign Up</button>
             </form>
-            <div className="divider">
+            <div className={styles.divider}>
               <h1>or signup with</h1>
             </div>
-            <form className="alt">
-              <div className="soc-med">
+            <form className={styles.alt}>
+              <div className={styles.socMed}>
                 <img src={google} alt="Google" />
                 <p>Sign up with Google</p>
               </div>
