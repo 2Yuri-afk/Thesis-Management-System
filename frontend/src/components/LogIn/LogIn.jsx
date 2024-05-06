@@ -25,7 +25,7 @@ const LogIn = () => {
         if (result.data.message === "Success") {
           console.log("Login Success");
           alert('Login successful!');
-          navigate('/home');
+          navigate('/DoneScrn');
         } else {
           alert('Incorrect password! Please try again.');
         }

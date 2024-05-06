@@ -1,27 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-.apple {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.text {
-  margin-top: 100px;
-  font-size: 50px;
-  color: rgb(174, 170, 170);
-}
-
+/* Global styles */
 * {
   font-family: 'Open Sans', sans-serif;
 }
 
-.proposal-title {
-  font-weight: bold;
-  padding-top: 20px;
-}
-
+/* Proposal component styles */
 .container {
   display: flex;
   justify-content: center;
@@ -86,7 +70,8 @@
   margin-bottom: 10px;
   display: flex;
   align-items: baseline;
-  margin-left: -10px;
+  margin-left: -50px;
+  width: 130%;
 }
 
 .form-container textarea#details {
@@ -97,37 +82,41 @@
   width: 450px;
 }
 
-.side-by-side-fields {
-  display: flex;
-  width: 600px;
-}
+.side-by-side-fields{
+    width: 100%;
+    margin-right: -200px;
 
+}
 .side-by-side-fields > div {
-  margin-right: 19px;
-  margin-bottom: 20px;
-  width: 150%;
-}
+    display: inline-block;
+    margin-right: 100px; /* Adjust the margin between the elements */
+    vertical-align: top; /* Align elements to the top to prevent overlapping */
 
+}
+  
 .side-by-side-fields label {
-  width: 100px;
-  margin-right: 23px;
-  margin-left: 10px;
-  line-height: 28px;
+    display: inline-block;
+    width: 100px; /* Set a fixed width for labels */
+    margin-right: -20px; /* Adjust margin as needed */
 }
 
-.side-by-side-fields input[type="text"]#client {
-  width: calc(100% - 110px);
-}
-
-.side-by-side-fields select#field {
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  background-color: #d9d9d9;
-  width: calc(100% - 100px);
-  margin-right: -30px;
-}
+.client-field {
+    display: flex;
+    align-items: center;
+  }
+  
+  .client-field label {
+    /* Optional: Adjust label styles */
+    margin-right: -30px;
+  }
+  
+  .client-field input[type="text"] {
+    /* Optional: Adjust input styles */
+    flex: 1; /* Allow the input to grow and fill available space */
+    margin-right: -100px;
+  }
+  
+  
 
 .form-container button {
   padding: 12px 24px;
@@ -199,8 +188,6 @@
 .green {
   background-color: green;
 }
-
-
 
 @keyframes formEntrance {
   0% {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./student-pages.css";
+
 
 export default function schedule() {
   return (
