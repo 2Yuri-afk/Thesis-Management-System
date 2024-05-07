@@ -56,6 +56,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* background-color: pink; */
 }
 
 .main h1 {
@@ -69,28 +70,31 @@ body {
   font-family: Poppins, sans-serif;
   font-size: 24px;
   font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 60px;
   color: #979191;
 }
 
 .main .inputBox {
   position: relative;
   width: 50%;
-  height: 40px;
+  height: 7%;
   background-color: #eeeaea;
   margin-top: 20px;
   display: flex;
+  border-radius: 15px;
+  align-items: center;
+  border: 0.5px rgb(177, 176, 176) solid;
 }
 
 .main .inputBox img {
-  height: 30px;
+  width: 35px;
+  height: 35px;
   padding: 5px;
+  margin-left: 10px;
 }
 
 .main .inputBox input {
-  width: 100%;
-  height: 90%;
+  width: 350px;
+  height: 45px;
   font-size: 16px;
   font-family: Poppins, sans-serif;
   border: none;
@@ -102,13 +106,20 @@ body {
   background-color: #8d4242;
   width: 190px;
   padding: 15px 20px 15px 20px;
-  margin-top: 40px;
-  border: none;
+  margin-top: 60px;
+  border: 2px solid transparent;
   border-radius: 30px;
   font-size: 22px;
   color: white;
   font-family: Poppins, sans-serif;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e2e0e0;
+  color: #8d4242;
+  border: #8d4242 2px solid;
+  transition: ease-in-out 0.15s;
 }
 
 .divider {
@@ -148,19 +159,26 @@ body {
   justify-content: center;
   padding: 10px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 10px;
   border-color: gray;
   width: 40%;
   height: 50px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .alt .socMed img {
   width: 30px;
   height: 30px;
+  margin-right: 10px;
 }
 
 .alt .socMed p {
   font-size: 20;
   margin: 0;
   padding: 0;
+}
+
+.errorIcon {
+  margin-right: 5px;
 }

@@ -17,9 +17,9 @@ function App() {
     // </Routes>
 
     // <StudentDashboard />
-    <AdminDashboard />
+    // <AdminDashboard />
     // <TeacherDashboard />
-    // <AdviserDashboard />
+    <AdviserDashboard />
   );
 }
 

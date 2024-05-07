@@ -7,7 +7,13 @@ import EventModal from "./EventModal";
 
 const localizer = momentLocalizer(moment);
 
-export default function MyCalendar({ size }) {
+export default function MyCalendar({
+  selectable,
+  size,
+  showAddButton,
+  isAdmin,
+}) {
+  console.log("showAddButton:", showAddButton);
   const [events, setEvents] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -55,6 +61,16 @@ export default function MyCalendar({ size }) {
     padding: "10px",
   };
 
+  // const events = [
+  //   {
+  //     id: 1,
+  //     title: "Meeting",
+  //     start: new Date(2024, 4, 10, 10, 0),
+  //     end: new Date(2024, 4, 10, 12, 0),
+  //     color: "red", // optional: you can customize event colors
+  //   },
+  // ];
+
   return (
     <>
       <Calendar
@@ -62,9 +78,9 @@ export default function MyCalendar({ size }) {
         events={events}
         startAccessor="start"
         endAccessor="end"
-        selectable={true}
+        selectable={selectable}
         onSelectSlot={handleSelectSlot}
-        onSelectEvent={handleSelectEvent}
+        onSelectEvent={isAdmin ? handleSelectEvent : undefined}
         style={calendarStyle}
       />
       <EventModal
@@ -77,9 +93,11 @@ export default function MyCalendar({ size }) {
         existingGroups={events.map((event) => event.group)}
         existingRooms={events.map((event) => event.room)}
       />
-      <button className="add-button" onClick={handleSelectFAB}>
-        +
-      </button>
+      {showAddButton && (
+        <button className="add-button" onClick={handleSelectFAB}>
+          +
+        </button>
+      )}
     </>
   );
 }

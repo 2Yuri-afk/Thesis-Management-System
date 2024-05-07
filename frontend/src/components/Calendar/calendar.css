@@ -33,6 +33,10 @@
   width: 80%;
 }
 
+.rbc-event.rbc-selected {
+  background-color: #a67d7d;
+}
+
 .rbc-day-bg {
   background-color: #ffffff;
 }

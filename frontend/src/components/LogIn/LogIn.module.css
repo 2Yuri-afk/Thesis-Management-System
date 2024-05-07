@@ -72,24 +72,33 @@ form p {
   color: #979191;
 }
 
-.inputBox {
+.main .inputBox {
   position: relative;
   width: 50%;
-  height: 60px;
+  height: 7%;
   background-color: #eeeaea;
   margin-top: 20px;
   display: flex;
+  border-radius: 15px;
+  align-items: center;
+  border: 1px rgb(157, 157, 157) solid;
 }
 
-.inputBox img {
-  height: 65%;
-  padding: 10px;
+.inputBox:focus {
+  border: 2px rgb(162, 112, 112) solid;
 }
 
-.inputBox input {
-  width: 100%;
-  height: 90%;
-  font-size: 20px;
+.main .inputBox img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.main .inputBox input {
+  width: 350px;
+  height: 45px;
+  font-size: 16px;
   font-family: Poppins, sans-serif;
   border: none;
   background-color: #eeeaea;
@@ -101,12 +110,19 @@ form p {
   width: 190px;
   padding: 15px 20px 15px 20px;
   margin-top: 60px;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 30px;
   font-size: 22px;
   color: white;
   font-family: Poppins, sans-serif;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e2e0e0;
+  color: #8d4242;
+  border: #8d4242 2px solid;
+  transition: ease-in-out 0.15s;
 }
 
 .divider {
@@ -143,10 +159,12 @@ form p {
   gap: 40px;
   padding: 10px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 10px;
   border-color: gray;
   width: 40%;
   height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
 }
 
 .socMed img {
@@ -159,4 +177,3 @@ form p {
   margin: 0;
   padding: 0;
 }
-

@@ -20,7 +20,7 @@ export default function schedule() {
         </div>
         <div className={styles["calendar"]}>
           <div className={styles["student-cal-bg"]}>
-            <MyCalendar />
+            <MyCalendar selectable={false} />
           </div>
         </div>
       </div>

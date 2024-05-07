@@ -43,7 +43,7 @@ const LogIn = () => {
             </div>
           </div>
           <div className={styles.cardRight}>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={styles.main}>
               <h1>LOG IN</h1>
               <p>
                 Don't have an account yet? <Link to="/SignUp">Sign Up</Link>
@@ -51,7 +51,7 @@ const LogIn = () => {
               <div className={styles.inputBox}>
                 <img src={email1} alt="Email Icon" />
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Email"
                   required
                   onChange={(event) => setEmail(event.target.value)}
